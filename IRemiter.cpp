@@ -20,7 +20,7 @@ void loop() {
     Serial.print("Enviando código IR: ");
     Serial.println(TV_POWER_CODE, HEX);
     
-    //irsend.sendNEC(TV_POWER_CODE, 32); // Enviar el código IR con 32 bits
+    irsend.sendNEC(TV_POWER_CODE, 32); // Enviar el código IR con 32 bits
 
     estado = !estado;  // Alternar estado
     Serial.println(estado ? "Encendiendo TV" : "Apagando TV");
